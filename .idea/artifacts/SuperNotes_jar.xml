@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SuperNotes:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SuperNotes_jar</output-path>
+    <root id="archive" name="SuperNotes.jar">
+      <element id="module-output" name="SuperNotes" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jfxrt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/JDBMS_LIB.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
