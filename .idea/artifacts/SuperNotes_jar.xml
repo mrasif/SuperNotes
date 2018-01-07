@@ -5,6 +5,7 @@
       <element id="module-output" name="SuperNotes" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/jfxrt.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/JDBMS_LIB.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/itextpdf-5.4.3.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

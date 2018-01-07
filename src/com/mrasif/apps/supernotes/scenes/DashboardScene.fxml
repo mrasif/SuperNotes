@@ -35,6 +35,8 @@
                <items>
                   <MenuItem fx:id="miBackup" mnemonicParsing="false" onAction="#miBackup_Click" text="Backup" />
                   <MenuItem fx:id="miRestore" mnemonicParsing="false" onAction="#miRestore_Click" text="Restore" />
+                  <MenuItem fx:id="miExportPdf" mnemonicParsing="false" onAction="#miExportPdf_Click" text="Export Pdf" />
+                  <MenuItem fx:id="miExportExcel" mnemonicParsing="false" onAction="#miExportExcel_Click" text="Export Excel" />
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Help">

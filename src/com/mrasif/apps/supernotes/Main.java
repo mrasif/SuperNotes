@@ -1,6 +1,8 @@
 package com.mrasif.apps.supernotes;
 
 import com.mrasif.apps.supernotes.apis.ApiDatabase;
+import com.mrasif.apps.supernotes.excel.MyExcel;
+import com.mrasif.apps.supernotes.pdf.MyPdf;
 import com.mrasif.apps.supernotes.scenes.LoginScene;
 import javafx.application.Application;
 

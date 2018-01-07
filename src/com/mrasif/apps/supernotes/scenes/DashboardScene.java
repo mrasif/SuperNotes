@@ -2,8 +2,10 @@ package com.mrasif.apps.supernotes.scenes;
 
 import com.mrasif.apps.supernotes.apis.ApiDatabase;
 import com.mrasif.apps.supernotes.applications.AppDashboard;
+import com.mrasif.apps.supernotes.excel.MyExcel;
 import com.mrasif.apps.supernotes.models.Note;
 import com.mrasif.apps.supernotes.models.User;
+import com.mrasif.apps.supernotes.pdf.MyPdf;
 import com.mrasif.apps.supernotes.utils.AppKeys;
 import com.mrasif.apps.supernotes.utils.SharedPreferences;
 
@@ -101,10 +103,34 @@ public class DashboardScene extends AppDashboard {
     private Label lblDetails;
 
     @FXML
+    private MenuItem miExportPdf;
+
+    @FXML
+    private MenuItem miExportExcel;
+
+    @FXML
     private Font x3;
 
     @FXML
     private Color x4;
+
+    @FXML
+    void miExportExcel_Click(ActionEvent event) {
+        try {
+            new MyExcel().generate(ApiDatabase.getNotes(user.getId()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void miExportPdf_Click(ActionEvent event) {
+        try {
+            new MyPdf().generate(ApiDatabase.getNotes(user.getId()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     void miAbout_Click(ActionEvent event) {
@@ -226,6 +252,8 @@ public class DashboardScene extends AppDashboard {
         assert lblDetails != null : "fx:id=\"lblDetails\" was not injected: check your FXML file 'DashboardScene.fxml'.";
         assert x3 != null : "fx:id=\"x3\" was not injected: check your FXML file 'DashboardScene.fxml'.";
         assert x4 != null : "fx:id=\"x4\" was not injected: check your FXML file 'DashboardScene.fxml'.";
+        assert miExportPdf != null : "fx:id=\"miExportPdf\" was not injected: check your FXML file 'DashboardScene.fxml'.";
+        assert miExportExcel != null : "fx:id=\"miExportExcel\" was not injected: check your FXML file 'DashboardScene.fxml'.";
         user= ApiDatabase.getUser(SharedPreferences.getString(AppKeys.USER_NAME));
         loadList();
         lvNotes.setOnMouseClicked(new EventHandler<MouseEvent>() {
